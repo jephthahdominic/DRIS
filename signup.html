@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" name="viewport" content="width=device-width initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/signup.css">
+  </head>
+  <body id="signin">
+    <header id="header">
+      <ul class="nav nav-tabs">
+        <li><a href="homepage.html"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+        <li><a href="main.html"><span class="glyphicon glyphicon-book"></span>  About </a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> News-Letter </a></li>
+        <li><a href="schlgal.html"><span class="glyphicon glyphicon-picture"></span>  Gallery </a></li>
+        <li class="active"><a href="signup.html"><span class="glyphicon glyphicon-education"></span> Common Entrance Reg. </a></li>
+
+        <button type="button" id="glyph" class="btn-info">
+          <span class="glyphicon glyphicon-log-out"></span>
+        </button>
+
+        <!--<button type="button" role="button" name="button" id="norm" class="btn-info">
+          <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>-->
+
+      </ul>
+
+    </header>
+
+    <main id="main">
+
+      <div class="alert alert-info alert-dismissable fade in" id="info">
+        <h4><span class="glyphicon glyphicon-alert"></span><span><strong> Note: For JSS1 Aspirants only</strong></h4> <span>Please All field areas must be filled</span><br>
+        <span>You must be at least 6 years old and must have passed from primary 6</span>
+      </div>
+      <div class="alert alert-danger alert-dismissable fade in" id="danger">
+        <h4><span class="glyphicon glyphicon-alert"></span><span><strong> Note: For JSS1 Aspirants only</strong></h4> <span>Please All field areas must be filled</span><br>
+        <span>You must be at least 6 years old and must have passed from primary 6</span>
+      </div>
+
+      <div class="form-container">
+
+        <div class="forms">
+          <h2><span class="glyphicon glyphicon-education"></span> COMMON ENTRANCE FORM</h2>
+          <form class="signup" action="https://gerona/spp.php " method="post" onsubmit="return validateform()">
+            <div class="input-cnt">
+              <i class="my_icon">First Name</i>
+              <input type="text" id="fName" name="firstName" placeholder="First Name" required><span class="glyphicon glyphicon-alert" id="badA"></span><span class="glyphicon glyphicon-ok" id="okA"></span>
+
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon">Last Name</i>
+              <input type="text" id="lName" name="lastName" placeholder="Last Name" required><span class="glyphicon glyphicon-alert" id="badB"></span><span class="glyphicon glyphicon-ok" id="okB"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> Other Names </i>
+              <input type="text" id="oName" name="other names" placeholder="Other Names" required><span class="glyphicon glyphicon-alert" id="badC"></span><span class="glyphicon glyphicon-ok" id="okC"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> Email </i>
+              <input type="email" id="email" name="email" placeholder="eg. example@gmail.com" required><span class="glyphicon glyphicon-alert" id="badD"></span><span class="glyphicon glyphicon-ok" id="okD"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> State of origin </i>
+              <select class="origin" name="" id="origin">
+                <option value="Abia">Abia state</option>
+                <option value="Adamawa">Adamawa state</option>
+                <option value="Akwa-Ibom"> Akwa-Ibom state</option>
+                <option value="Anambra">Anambra state</option>
+                <option value="Bauchi">Bauchi state</option>
+                <option value="Bayelsa">Bayelsa state</option>
+                <option value="Benue">Benue state</option>
+                <option value="Borno">Borno state</option>
+                <option value="Cross river">Cross river state</option>
+                <option value="Delta">Delta state</option>
+                <option value="Ebonyi">Ebonyi state</option>
+                <option value="Edo">Edo state</option>
+                <option value="Ekiti">Ekiti state</option>
+                <option value="Enugu">Enugu state</option>
+                <option value="Gombe">Gombe state</option>
+                <option value="Imo">Imo state</option>
+                <option value="Jigawa">Jigawa state</option>
+                <option value="Kaduna">Kaduna state</option>
+                <option value="Kano">Kano state</option>
+                <option value="Kastina">Kastina state</option>
+                <option value="Lagos">Lagos state</option>
+                <option value="Nasarawa">Nasarawa state</option>
+                <option value="Niger">Niger state</option>
+
+              </select><span class="glyphicon glyphicon-alert" id="badE"></span><span class="glyphicon glyphicon-ok" id="okE"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> Age </i>
+              <input id="age" type="number" name="age" placeholder="Age" min="7" required><span class="glyphicon glyphicon-alert" id="badF"></span><span class="glyphicon glyphicon-ok" id="okF"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> D.O.B </i>
+              <input type="date" name="D.O.B" placeholder="D.O.B" required min="2013"><span class="glyphicon glyphicon-alert" id="badG"></span><span class="glyphicon glyphicon-ok" id="okG"></span>
+            </div>
+            <div class="input-cnt" required>
+              <i class="my_icon"> Sex </i>
+              <input type="radio" name="gender" value="gender" id= "male">
+              <label for="male"><span></span>male</label>
+              <input type="radio" value="female" name="gender" id="female">
+              <label for="female"><span></span>female</label><span class="glyphicon glyphicon-alert" id="badH"></span><span class="glyphicon glyphicon-ok" id="okH"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> Previous school </i>
+              <input type="text" id="prev" name="prevschl" placeholder="previous school" required><span class="glyphicon glyphicon-alert" id="badI"></span><span class="glyphicon glyphicon-ok" id="okI"></span>
+            </div>
+            <div class="input-cnt">
+              <i class="my_icon"> Class </i>
+              <input type="text" id="clas" name="class" pattern="[a-zA-Z 0-6]+"title="alphanumeric values only." placeholder="primary 6 0nly"required><span class="glyphicon glyphicon-alert" id="badJ"></span><span class="glyphicon glyphicon-ok" id="okJ"></span>
+            </div>
+            <input id="submit" type="submit" name="register" value="REGISTER">
+          </form>
+
+          <p id="demoo"></p>
+        </div>
+
+      </div>
+
+
+    </main>
+  <script src="js/signup.js"></script>
+  </body>
+</html>
