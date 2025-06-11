@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </section>
       <section className="p-8 py-14 text-center flex flex-col items-center gap-3 bg-[#f5f5f5]">
-        <h2 className="text-4xl font-semibold section-heading">Our Values</h2>
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Our Values</h2>
         <div className="flex items-start justify-center gap-28 max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap">
           {values.map((value, key) => (
             <ValueCard value={value} key={key}/>
