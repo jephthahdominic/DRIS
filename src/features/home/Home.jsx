@@ -43,7 +43,7 @@ export default function Home() {
         <div className="mt-10 flex gap-10">
           <div className="flex flex-col items-center justify-center gap-3  p-3 rounded-[10px]">
             <SiRotaryinternational className="text-[6rem] text-[#1f1f1f65]"/>
-            <div className="text-xl text-[#1f1f1f65]">
+            <div className="text-xl max-md:text-sm text-[#1f1f1f65]">
               <p>Rotary spelling B competition</p>
               <p>1st Position, Rivers state</p>
               <span>(2018, 2019).</span>
@@ -51,7 +51,7 @@ export default function Home() {
           </div>
           <div className="flex flex-col items-center p-3  rounded-[10px]">
             <img src={waec_logo} alt="waec" width={150}/>
-            <div className="text-xl text-[#1f1f1f65]">
+            <div className="text-xl max-md:text-sm text-[#1f1f1f65]">
               <p>West African Examination Council</p>
               <p>WAEC Approved.</p>
               <span>(2022)</span>
