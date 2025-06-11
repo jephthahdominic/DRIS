@@ -5,7 +5,7 @@ import cowbell from "../../assets/cowbell.jpg"
 
 export default function Awards() {
   return (
-    <div className="mt-10 flex gap-10">
+    <div className="max-w-full mt-10 flex gap-10 flex-wrap">
         <div className="flex flex-col items-center p-3  rounded-[10px]">
             <img src={cowbell} alt="litfest" width={120}/>
             <div className="text-xl max-md:text-sm text-[#1f1f1f65]">
