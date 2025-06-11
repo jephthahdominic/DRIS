@@ -39,7 +39,7 @@ export default function About() {
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5] ">
         <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Ready to Join Us?</h2>
-        <p className="text-[#1f1f1fd5] text-xl max-sm:text-md">Give your child the gift of a world-class education. Enroll today and secure their future!</p>
+        <p className="text-[#1f1f1fd5] sm:text-xl">Give your child the gift of a world-class education. Enroll today and secure their future!</p>
         <div className="flex items-center gap-8">
           <Button>Learn How to Enroll</Button>
         </div>
