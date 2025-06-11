@@ -1,6 +1,6 @@
 import { SiRotaryinternational } from "react-icons/si"
 import waec_logo from "../../assets/waec-logo.jpg"
-import litfest from "../../assets/litfest.png"
+import litfest from "../../assets/Litfest.png"
 import cowbell from "../../assets/cowbell.jpg"
 
 export default function Awards() {
