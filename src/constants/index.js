@@ -1,4 +1,4 @@
-import secondary_class from "../assets/secondary_class.jpg"
+import secondary_class from "../assets/secondary_class.JPG"
 
 export const values = [
     {
