@@ -35,5 +35,8 @@ form input{
         background: black;
         margin: 10px auto;
     }
+    .testimonial::-webkit-scrollbar{
+        display: none;
+    }
 }
 

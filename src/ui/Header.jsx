@@ -1,12 +1,21 @@
 import { Link, NavLink } from "react-router-dom"
-import logo from "../assets/graduation-cap.png"
+import logo from "../assets/DRIS_logo.png"
 import { BiMenu } from "react-icons/bi"
+import { useState } from "react"
 
 export default function Header() {
+  const [isScrollActive, setIsScrollActive] = useState(false);
+  window.addEventListener('scroll', ()=>{
+    if(window.scrollY > 50){
+      setIsScrollActive(true)
+    }else{
+      setIsScrollActive(false)
+    }
+  })
   return (
-    <header className="p-8 max-sm:p-5 flex items-center justify-between bg-red-700">
-        <Link to="/" className="flex items-center gap-3">
-            <img src={logo} alt="logo" width={28}/>
+    <header className={`p-8 max-sm:p-5 flex items-center z-10 justify-between fixed w-full ${isScrollActive ? "bg-red-700": "bg-transparent"}`}>
+        <Link to="/" className="flex items-center gap-1">
+            <img src={logo} alt="logo" width={50}/>
             <h4 className="text-[1.25rem] max-sm:text-[1rem] text-[#fff]">Dominican Royale <span className="max-xl:block">International School</span></h4>
         </Link>
         <button><BiMenu className="text-[#fff] text-[1.5rem] md:hidden"/></button>
