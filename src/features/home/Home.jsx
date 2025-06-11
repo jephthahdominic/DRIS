@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <section className="p-8 py-14">
+      <section className="p-8 max-sm:p-4 py-14">
         <div className="text-center flex flex-col items-center gap-3">
           <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Us</h2>
           <p className="text-[#1f1f1fd5] w-[70%] max-md:w-[100%] leading-relaxed text-xl max-sm:text-md">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt, enim velit 
