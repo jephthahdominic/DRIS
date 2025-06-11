@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4">
-        <h2 className="text-4xl font-semibold section-heading">Our Educational Programs</h2>
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Our Educational Programs</h2>
         <div className="flex item-start justify-center gap-18 mt-8 max-md:flex-wrap">
           {programs.map((program, key)=>(
             <ProgramCard program={program} key={key}/>
@@ -39,7 +39,7 @@ export default function Home() {
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5] ">
-        <h2 className="text-4xl font-semibold section-heading">Awards for Excellence</h2>
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Awards for Excellence</h2>
         <div className="mt-10 flex gap-10">
           <div className="flex flex-col items-center justify-center gap-3  p-3 rounded-[10px]">
             <SiRotaryinternational className="text-[6rem] text-[#1f1f1f65]"/>
@@ -66,15 +66,15 @@ export default function Home() {
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5] ">
-        <h2 className="text-4xl font-semibold section-heading">Ready to Join Us?</h2>
-        <p className="text-[#1f1f1fd5] text-xl">Give your child the gift of a world-class education. Enroll today and secure their future!</p>
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Ready to Join Us?</h2>
+        <p className="text-[#1f1f1fd5] text-xl max-sm:text-md">Give your child the gift of a world-class education. Enroll today and secure their future!</p>
         <div className="flex items-center gap-8">
           <Button>Learn How to Enroll</Button>
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4">
-        <h2 className="text-4xl font-semibold section-heading">Contact Us?</h2>
-        <p className="text-[#1f1f1fd5] text-xl">We’d love to hear from you! Contact us for any inquiries or support.</p>
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Contact Us?</h2>
+        <p className="text-[#1f1f1fd5] text-xl max-sm:text-md">We’d love to hear from you! Contact us for any inquiries or support.</p>
         <div className="flex items-center gap-8">
           <Link to="/contact" className="p-3 px-6 mt-2 text-[#1D4ED8] bg-white border border-blue-500 shadow-2xl hover:bg-[#1D4ED8] hover:text-[#fff] transition-all cursor-pointer
           rounded-[10px]">Contact us</Link>
