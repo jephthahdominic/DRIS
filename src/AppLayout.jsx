@@ -2,6 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Header from './ui/Header'
 import Footer from './ui/Footer'
+import Navbar from './ui/Navbar'
 
 export default function AppLayout() {
   return (
@@ -11,6 +12,8 @@ export default function AppLayout() {
         <Outlet />
         <Footer />
       </section>
+      <Navbar />
+
     </div>
   )
 }

@@ -2,12 +2,13 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom"
 import { About, Admission, Contact, Gallery, Home, News } from "./features"
 import Error from "./Error"
 import AppLayout from "./AppLayout"
+import { SidebarProvider } from "./context/SidebarContext"
 
 function App() {
   const router = createBrowserRouter([
     {
       errorElement: <Error />,
-      element: <AppLayout />,
+      element: <SidebarProvider><AppLayout /></SidebarProvider>,
       children:[
         {
           path: "/",

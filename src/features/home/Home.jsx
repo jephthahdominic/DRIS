@@ -4,10 +4,10 @@ import { programs, values } from "../../constants/index"
 import ValueCard from "../about/ValueCard"
 import ProgramCard from "./ProgramCard"
 import BusinessProgress from "./BusinessProgress"
-import { SiRotaryinternational } from "react-icons/si"
-import waec_logo from "../../assets/waec-logo.jpg"
+
 import Testimonials from "./Testimonials"
 import { Link } from "react-router-dom"
+import Awards from "./Awards"
 
 export default function Home() {
   return (
@@ -40,24 +40,7 @@ export default function Home() {
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5] ">
         <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Awards for Excellence</h2>
-        <div className="mt-10 flex gap-10">
-          <div className="flex flex-col items-center justify-center gap-3  p-3 rounded-[10px]">
-            <SiRotaryinternational className="text-[6rem] text-[#1f1f1f65]"/>
-            <div className="text-xl max-md:text-sm text-[#1f1f1f65]">
-              <p>Rotary spelling B competition</p>
-              <p>1st Position, Rivers state</p>
-              <span>(2018, 2019).</span>
-            </div>
-          </div>
-          <div className="flex flex-col items-center p-3  rounded-[10px]">
-            <img src={waec_logo} alt="waec" width={150}/>
-            <div className="text-xl max-md:text-sm text-[#1f1f1f65]">
-              <p>West African Examination Council</p>
-              <p>WAEC Approved.</p>
-              <span>(2022)</span>
-            </div>
-          </div>
-        </div>
+        <Awards />
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4">
         <h2 className="text-4xl font-semibold section-heading">Testimonials</h2>
