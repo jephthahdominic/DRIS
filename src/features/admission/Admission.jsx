@@ -1,5 +1,16 @@
+import { Link } from "react-router-dom";
 import AdmissionProcess from "./AdmissionProcess";
 import EnrollmentDocuments from "./EnrollmentDocuments";
+
+const faq = [
+  {
+    question:"What is the application deadline?",
+    answer:"Applications are accepted year-round, contact the school for further details."
+  },
+  {
+    question:"What is the "
+  }
+]
 
 export default function Admission() {
   return (
@@ -23,12 +34,20 @@ export default function Admission() {
         </div>
         <EnrollmentDocuments />
       </section>
-      <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-white">
+      <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5]">
+        <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Contact Us?</h2>
+        <p className="text-[#1f1f1fd5] sm:text-xl w-[70%]">We’d love to hear from you! Contact us for any inquiries or support.</p>
+        <div className="flex items-center gap-8">
+          <Link to="/contact" className="p-3 px-6 mt-2 text-[#1D4ED8] bg-white border border-blue-500 shadow-2xl hover:bg-[#1D4ED8] hover:text-[#fff] transition-all cursor-pointer
+          rounded-[10px]">Contact us</Link>
+        </div>
+      </section>
+      {/* <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5]">
         <div className="flex flex-col items-center">
           <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Frequently Asked Questions</h2>
         </div>
-        
-      </section>
+        <FAQ />
+      </section> */}
     </div>
   )
 }

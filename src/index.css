@@ -20,21 +20,40 @@ footer nav a {
 
 form input{
     padding: 10px;
-    background-color: white;
     border-radius: 10px;
     outline: none;
-    border: white;
+}
+
+input[type="radio"]:checked ~ div{
+    display: flex;
+    max-height: fit-content;
 }
 
 @theme {
     --animate-fadeIn: fadeIn .5s ease-in-out;
+    --animate-expandDown: expandDown .3s ease-in-out;
     
     @keyframes fadeIn{
-        0% {
+        0%{
             opacity: 0;
         }
         100%{
             opacity: 1;
+        }
+    }
+
+    @keyframes expandDown {
+        0%{
+            max-height: 0%
+        }
+        20%{
+            max-height: 20%
+        }
+        50%{
+            max-height: 50%
+        }
+        100%{
+            max-height:fit-content
         }
     }
 }

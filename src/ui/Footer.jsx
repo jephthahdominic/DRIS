@@ -8,7 +8,7 @@ import Button from "./Button";
 export default function Footer() {
   return (
     <footer className="bg-[#1F1F1F] p-8 flex flex-col gap-32 max-sm:gap:18">
-        <section className="flex max-xl:flex-col max-xl:items-center xl:justify-between  gap-28 max-sm:gap-10">
+        <section className="flex max-xl:flex-col max-xl:items-center xl:justify-between gap-52 max-sm:gap-10">
             <div className="max-sm:text-center">
                 <h3 className="text-[#e8e8e8] text-[1.25rem] font-semibold">Contact Us</h3>
                 <div className="flex flex-col gap-4 mt-4 max-sm:items-center">
@@ -28,7 +28,7 @@ export default function Footer() {
                     <NavLink to="/gallery" className={({isActive}) => isActive ? "text-[#fff]" : "text-[#c5c5c5]"}>Gallery</NavLink>
                 </nav>
             </div>
-            <div className="flex flex-col gap-8 max-sm:items-center">
+            <div className="flex flex-col gap-8 max-sm:items-center flex-1">
                 <div>
                     <h3 className="text-[rgb(232,232,232)] text-[1.25rem] font-semibold">Follow Us</h3>
                     <div className="flex items-center gap-3 text-[#c5c5c5] text-[1.5rem] mt-3">
@@ -40,8 +40,8 @@ export default function Footer() {
                 <div className="max-sm:text-center">
                     <h3 className="text-[rgb(232,232,232)] text-[1.25rem] font-semibold">Stay in Touch</h3>
                     <form action="" className="flex flex-col gap-3 mt-4 max-sm:items-center">
-                        <input type="text" placeholder="Enter your name (Optional)" />
-                        <input type="email" placeholder="Enter your Email" required/>
+                        <input type="text" placeholder="Enter your name (Optional)" className="border border-white bg-white"/>
+                        <input type="email" placeholder="Enter your Email" className="border border-white bg-white" required/>
                         <Button>Subscribe.</Button>
                     </form>
                 </div>
