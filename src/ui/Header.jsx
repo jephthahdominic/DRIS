@@ -26,7 +26,7 @@ export default function Header() {
             <NavLink to ="/about_us" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>About</NavLink>
             <NavLink to="/admission" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>Admission</NavLink>
             <NavLink to ="/contact" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>Contact</NavLink>
-            <NavLink to="/news" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>News</NavLink>
+            {/* <NavLink to="/news" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>News</NavLink> */}
             <NavLink to="/gallery" className={({isActive}) => isActive ? "text-[#fff] border-b-2 border-b-[#fff]" : "text-[#f9f9f9] border-b-2 border-transparent"}>Gallery</NavLink>
         </nav>
     </header>
