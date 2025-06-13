@@ -2,6 +2,8 @@ import { useState } from "react";
 import { gallery } from "../../assets/Gallery";
 import ImageCard from "./ImageCard";
 import ImageViewer from "./ImageViewer";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
+import { IoClose, IoCloseCircle } from "react-icons/io5";
 
 export default function Gallery() {
   const [openImgViewer, setOpenViewer] = useState(false);
@@ -21,15 +23,23 @@ export default function Gallery() {
           Explore Education in DRIS
         </p>
       </div>
-      <section className="px-8 max-sm:px-4 py-14 columns-2 sm:columns-2 md:columns-3 lg:columns-4 p-4 space-y-4 text-center gap-4 bg-white">
+      <section className="px-8 max-sm:px-4 py-14 columns-2 sm:columns-2 md:columns-3 lg:columns-4 p-4 space-y-4 text-center gap-4 bg-[#f5f5f5]">
         {gallery.map((item, key)=>(
           <ImageCard key={key} item={item} clickAction={()=>handleClickImage(item)}/>
         ))}
       </section>
-      {openImgViewer && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.50)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
-        <div className="bg-red-600 h-full">
-          <ImageViewer currentImg={currentImg}/>
-        </div>
+      {openImgViewer && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.80)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
+          <IoClose className="text-white text-5xl cursor-pointer absolute right-10 top-14" onClick={()=>setOpenViewer(false)}/>
+          <div className="h-full flex flex-col items-center justify-center">
+            <ImageViewer currentImg={currentImg}/>
+            <div className="flex items-center gap-2 mt-4">
+              {gallery.map((item, key)=>(
+                <div className={`w-[50px] max-h-[50px] overflow-hidden ${item.URI === currentImg.URI && 'border-2 border-white'}`} key={key} onClick={()=>setCurrentImg(item)}>
+                  <img src={item.URI} alt="image" className="w-full max-h-[40px] object-cover"/>
+                </div>
+              ))}
+            </div>
+          </div>
       </div>}
     </div>
   )
