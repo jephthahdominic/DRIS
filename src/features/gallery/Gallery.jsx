@@ -29,8 +29,8 @@ export default function Gallery() {
         ))}
       </section>
       {openImgViewer && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.80)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
-          <IoClose className="text-white text-5xl cursor-pointer" onClick={()=>setOpenViewer(false)}/>
-          <div className="h-full flex flex-col items-center justify-center">
+          <div className="h-full flex flex-col items-center justify-center gap-2">
+            <IoClose className="text-white text-5xl cursor-pointer" onClick={()=>setOpenViewer(false)}/>
             <ImageViewer currentImg={currentImg}/>
             <div className="flex items-center gap-2 mt-4">
               {gallery.map((item, key)=>(
