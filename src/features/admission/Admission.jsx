@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import AdmissionProcess from "./AdmissionProcess";
 import EnrollmentDocuments from "./EnrollmentDocuments";
+import { useState } from "react";
+import { IoCloseCircle } from "react-icons/io5";
 
 const faq = [
   {
@@ -13,6 +15,9 @@ const faq = [
 ]
 
 export default function Admission() {
+
+  const [openScheduleBooker, setOpenScheduleBooker] = useState(false)
+
   return (
     <div className="min-h-screen max-lg:h-3/4 w-full">
       <div className="h-3/4 px-8 max-sm:px-4 py-14 pt-40 bg-[rgba(31,31,31,0.8)] flex flex-col justify-center items-center text-center">
@@ -29,7 +34,7 @@ export default function Admission() {
           <div className="flex flex-col items-center">
             <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Admission Process</h2>
           </div>
-          <AdmissionProcess />
+          <AdmissionProcess setOpenScheduleBooker={setOpenScheduleBooker}/>
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 bg-white">
@@ -59,6 +64,11 @@ export default function Admission() {
         </div>
         <FAQ />
       </section> */}
+      {openScheduleBooker && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.50)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
+        <IoCloseCircle className="text-white text-6xl cursor-pointer" onClick={()=>setOpenScheduleBooker(false)}/>
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0BVThoPS_wpXyW0zNGTriTUKJa_JOAyfgypYYNU37XN4cRZ129Zej--_rew-krk2fgmGPQQD_U?gv=true" style={{border: 0}} width="100%" height="600" frameBorder="0" className="bg-white h-11/12 w-11/12 m-auto rounded-[10px]"></iframe>
+        Hello
+      </div>}
     </div>
   )
 }

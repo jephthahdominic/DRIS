@@ -1,7 +1,16 @@
+import { useState } from "react";
 import { gallery } from "../../assets/Gallery";
 import ImageCard from "./ImageCard";
+import ImageViewer from "./ImageViewer";
 
 export default function Gallery() {
+  const [openImgViewer, setOpenViewer] = useState(false);
+  const [currentImg, setCurrentImg] = useState(null);
+
+  function handleClickImage(item){
+    setOpenViewer(true);
+    setCurrentImg(item)
+  }
   return (
     <div className="max-lg:h-3/4 w-full bg-[url('/science_lab.jpeg')] bg-cover bg-no-repeat bg-center bg-fixed">
       <div className="min-h-11/12 px-8 max-sm:px-4 py-14 pt-40 bg-[rgba(31,31,31,0.8)] flex flex-col justify-center items-center text-center">
@@ -13,11 +22,15 @@ export default function Gallery() {
         </p>
       </div>
       <section className="px-8 max-sm:px-4 py-14 columns-2 sm:columns-2 md:columns-3 lg:columns-4 p-4 space-y-4 text-center gap-4 bg-white">
-        {gallery.map((img, key)=>(
-          <ImageCard key={key} img={img}/>
+        {gallery.map((item, key)=>(
+          <ImageCard key={key} item={item} clickAction={()=>handleClickImage(item)}/>
         ))}
       </section>
-
+      {openImgViewer && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.50)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
+        <div className="bg-red-600 h-full">
+          <ImageViewer currentImg={currentImg}/>
+        </div>
+      </div>}
     </div>
   )
 }

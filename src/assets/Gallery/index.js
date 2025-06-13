@@ -6,4 +6,26 @@ import imageE from "./8.jpeg"
 import imageF from "./9.jpeg"
 import imageG from "./10.jpeg"
 
-export const gallery = [imageA,imageB, imageC, imageD, imageE, imageF, imageG];
+export const gallery = [
+    {
+        URI:imageA
+    },
+    {
+        URI:imageB
+    },
+    {
+        URI:imageC
+    },
+    {
+        URI:imageD
+    },
+    {
+        URI:imageE
+    },
+    {
+        URI:imageF
+    },
+    {
+        URI:imageG
+    }
+]
