@@ -23,10 +23,10 @@ export default function Contact() {
             <p className="text-[#1f1f1f] text-[0.95rem] flex gap-2 items-center"><GrPhone /> +234-803-313-4187</p>
             <p className="text-[#1f1f1f] text-[0.95rem] flex gap-2 items-center"><GrMail  /> dominicanroyaleschool@gmail.com</p>
           </div>
-          <div className="flex items-center gap-3 text-[#1f1f1f] text-[1.5rem] mt-4">
-            <a href="/"><FaFacebook /></a>
-            <a href="/"><FaWhatsapp /></a>
-            <a href="/"><FaInstagram /></a>
+          <div className="flex items-center gap-5 text-[#1f1f1f] text-[1.5rem] mt-8">
+            <a href="/" className="text-3xl"><FaFacebook /></a>
+            <a href="/" className="text-3xl"><FaWhatsapp /></a>
+            <a href="/" className="text-3xl"><FaInstagram /></a>
           </div>
         </div>
         <div className="flex flex-col xl:w-[40%] max-sm:w-[100%] max-sm:p-10 sm:w-[70%] lg:items-center max-sm:bg-[#f5f5f5]" data-aos="zoom-in-right" data-aos-offset="200"
