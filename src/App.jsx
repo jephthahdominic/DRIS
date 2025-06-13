@@ -3,6 +3,10 @@ import { About, Admission, Contact, Gallery, Home, News } from "./features"
 import Error from "./Error"
 import AppLayout from "./AppLayout"
 import { SidebarProvider } from "./context/SidebarContext"
+import Aos from "aos"
+import "aos/dist/aos.css"
+
+Aos.init();
 
 function App() {
   const router = createBrowserRouter([

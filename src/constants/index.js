@@ -1,3 +1,5 @@
+import nursery_class from "../assets/Gallery/2.jpeg"
+import primary_class from "../assets/Gallery/12.jpeg"
 import secondary_class from "../assets/secondary_class.JPG"
 
 export const values = [
@@ -18,12 +20,12 @@ export const values = [
 
 export const programs = [
     {
-        coverImg: secondary_class,
+        coverImg: nursery_class,
         category: "Nursery Education",
         description:"A nurturing foundation with play-based learning to spark curiosity and social skills for ages 2-5."
     },
     {
-        coverImg: secondary_class,
+        coverImg: primary_class,
         category: "Primary Education",
         description: "A balanced curriculum blending academics, arts, and practical skills for ages 6-11."
     },
