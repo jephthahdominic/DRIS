@@ -10,11 +10,25 @@ export default function About() {
       <div className="h-3/4 px-8 max-sm:px-4 py-14 pt-40 bg-[rgba(31,31,31,0.8)] flex flex-col justify-center items-center text-center">
         <h1 className="text-5xl max-sm:text-4xl text-[#FFF] font-semibold max-md:leading-normal" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000">Get To Know Us</h1>
-        <p className="text-xl text-[#c8c8c8] w-[70%] max-md:w-[100%] leading-relaxed mt-6" data-aos="zoom-in" data-aos-duration="1000">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit, veritatis quia eum, non aliquid adipisci 
-          tempora maxime reiciendis, excepturi nemo eveniet nihil fugiat atque at! Aperiam ipsam velit suscipit!
+        <p className="text-xl text-[#c8c8c8] w-[70%] max-md:w-[100%] leading-relaxed mt-2" data-aos="zoom-in" data-aos-duration="1000">
+          We are committed to a better education
         </p>
       </div>
+      <section className="px-8 max-sm:px-4 py-14 bg-[#f5f5f5]">
+        <div className="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-offset="200"
+            data-aos-duration="1000" data-aos-once="false">
+          <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Dominican Royale International School (D.R.I.S.)</h2>
+          <p className="text-[#1f1f1fd5] max-md:w-[100%] leading-relaxed md:text-xl text-justify">
+            Dominican Royale International School (D.R.I.S.), founded in January 2007, is a growing private institution in Port Harcourt, Nigeria, committed 
+            to delivering quality education from nursery through secondary school. Born out of a passion to provide accessible and compassionate learning in 
+            an underserved area, D.R.I.S. began with just four children and three teachers and has since evolved into a respected school writing both WAEC and 
+            NECO exams, with successful graduates within and outside Nigeria. Our school is driven by strong values, personalized attention, and a commitment 
+            to nurturing every child’s potential in a safe, spiritual, and academically sound environment. With a focus on character development and academic 
+            excellence, D.R.I.S. continues to grow through community trust and a shared vision of making a lasting difference in education.</p>
+          <Link to="/about_us" className="w-max py-4 px-10 mt-10 text-[#fff] bg-blue-500 shadow-2xl hover:bg-[#1D4ED8] transition-all cursor-pointer
+          rounded-[10px]">Learn More</Link>
+        </div>
+      </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-white">
         <div className="flex flex-col items-center" data-aos="zoom-in" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="true">
