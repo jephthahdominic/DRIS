@@ -26,7 +26,7 @@ export default function Home() {
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-3 bg-[#f5f5f5]">
         <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading" data-aos="zoom-in" data-aos-offset="200"
         data-aos-duration="1000" data-aos-once="false">Our Values</h2>
-        <div className=" flex flex-col gap-8 max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap" data-aos="zoom-in" data-aos-offset="200"
+        <div className=" flex flex-col items-center gap-8 max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap" data-aos="zoom-in" data-aos-offset="200"
         data-aos-duration="1000" data-aos-once="false">
           {values.map((value, key) => (
             <ValueCard value={value} key={key}/>
@@ -34,7 +34,7 @@ export default function Home() {
           <div className="max-md:w-[80%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
             <h3 className="text-xl font-semibold">Our Core Values</h3>
-            <ul className=" list-disc flex flex-col gap-3 text-justify mt-6 px-10">
+            <ul className=" list-disc flex flex-col gap-3 mt-6 px-10">
               <li>
                 Faith in God:
                 We build our foundation on God’s Word. Every learner is encouraged to trust, love, and walk daily with Christ.

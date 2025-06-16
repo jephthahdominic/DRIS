@@ -17,7 +17,7 @@ export default function About() {
       <section className="px-8 max-sm:px-4 py-14 bg-[#f5f5f5]">
         <div className="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
-          <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Dominican Royale International School (D.R.I.S.)</h2>
+          <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About D.R.I.S.</h2>
           <p className="text-[#1f1f1fd5] max-md:w-[100%] leading-relaxed md:text-xl text-justify">
             Dominican Royale International School (D.R.I.S.), founded in January 2007, is a growing private institution in Port Harcourt, Nigeria, committed 
             to delivering quality education from nursery through secondary school. Born out of a passion to provide accessible and compassionate learning in 
@@ -25,8 +25,8 @@ export default function About() {
             NECO exams, with successful graduates within and outside Nigeria. Our school is driven by strong values, personalized attention, and a commitment 
             to nurturing every child’s potential in a safe, spiritual, and academically sound environment. With a focus on character development and academic 
             excellence, D.R.I.S. continues to grow through community trust and a shared vision of making a lasting difference in education.</p>
-          <Link to="/about_us" className="w-max py-4 px-10 mt-10 text-[#fff] bg-blue-500 shadow-2xl hover:bg-[#1D4ED8] transition-all cursor-pointer
-          rounded-[10px]">Learn More</Link>
+          <Link to="/contact" className="w-max py-4 px-10 mt-10 text-[#fff] bg-blue-500 shadow-2xl hover:bg-[#1D4ED8] transition-all cursor-pointer
+          rounded-[10px]">Contact Us</Link>
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-white">
@@ -35,11 +35,11 @@ export default function About() {
           <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Our Values</h2>
           <p className="mt-4 text-[#1f1f1f] text-center">Over the years we have held on to our values</p>
         </div>
-        <div className="max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap">
+        <div className="flex flex-col items-center gap-8 max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap">
           {values.map((value, key)=> (
             <ValueCard value={value} key={key}/>
           ))}
-                    <div className="max-md:w-[80%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
+          <div className="max-md:w-[80%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
             <h3 className="text-xl font-semibold">Our Core Values</h3>
             <ul className=" list-disc flex flex-col gap-3 text-justify mt-6 px-10">
