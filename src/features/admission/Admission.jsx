@@ -66,7 +66,7 @@ export default function Admission() {
       </section> */}
       {openScheduleBooker && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.50)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
         <IoCloseCircle className="text-white text-6xl cursor-pointer" onClick={()=>setOpenScheduleBooker(false)}/>
-        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2wNVFhPref4u89GsqkYwJsv-wLtzJUUJoE0cwgn1E6RKh8gx2F5lid1hM7QPqUKloHkuolwxf9?gv=true" style="border: 0" width="100%" height="600" frameborder="0"></iframe>        Hello
+        <iframe src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2wNVFhPref4u89GsqkYwJsv-wLtzJUUJoE0cwgn1E6RKh8gx2F5lid1hM7QPqUKloHkuolwxf9?gv=true" style="border: 0" width="100%" height="600" frameBorder="0"></iframe>
       </div>}
     </div>
   )
