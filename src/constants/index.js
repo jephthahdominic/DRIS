@@ -4,18 +4,13 @@ import secondary_class from "../assets/secondary_class.JPG"
 
 export const values = [
     {
-        title:"Our mission",
-        statement:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt, enim velit earum tempore reiciendis. Nesciunt aliquid dolores debitis optio et, officia doloremque quae illum voluptates cum sapiente dolor recusandae!"
+        title:"Our Vision",
+        statement:"TO CONTRIBUTE TO THE TRANSFORMATION OF THE NATION BY RAISING UP AND EQUIPPING THE YOUNGER GENERATION TO MEET UP WITH THE ASPIRATIONS OF THE NATIONAL DEVELOPMENT"
     },
     {
-        title:"Our vision",
-        statement:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt, enim velit earum tempore reiciendis. Nesciunt aliquid dolores debitis optio et, officia doloremque quae illum voluptates cum sapiente dolor recusandae!"
+        title:"Our Mission",
+        statement:"WE WORK TOWARDS ACHIEVING THE VISION OF THE SCHOOL BY ENGAGING TESTED AND PROVEN PROFESSIONALS, TO TRAIN AND INCULCATE HIGH LEVEL OF MORALS AND ACADEMIC EXCELLENCE BY MAKING AVAILABLE A CONDUCIVE ENVIRONMENT FOR TEACHING AND LEARNING AT ALL LEVELS PROVIDING ALL THE NECESSARY MATERIALS THAT WILL MAKE LEARNING EASY, INTERESTING AND FUN GIVING NECESSARY EXPOSURE TO CHILDREN TO ENHANCE THEIR SOCIAL CAPACITY, LEARNING SKILLS AND CREATIVITY"
     },
-    {
-        title:"Our values",
-        statement:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero nesciunt, enim velit earum tempore reiciendis. Nesciunt aliquid dolores debitis optio et, officia doloremque quae illum voluptates cum sapiente dolor recusandae!"
-    },
-
 ]
 
 export const programs = [

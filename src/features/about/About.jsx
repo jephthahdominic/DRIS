@@ -35,10 +35,45 @@ export default function About() {
           <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">Our Values</h2>
           <p className="mt-4 text-[#1f1f1f] text-center">Over the years we have held on to our values</p>
         </div>
-        <div className="flex items-start justify-center gap-28 max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap">
+        <div className="max-md:gap-18 py-10 max-md:py-8 max-md:flex-wrap">
           {values.map((value, key)=> (
             <ValueCard value={value} key={key}/>
           ))}
+                    <div className="max-md:w-[80%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
+            data-aos-duration="1000" data-aos-once="false">
+            <h3 className="text-xl font-semibold">Our Core Values</h3>
+            <ul className=" list-disc flex flex-col gap-3 text-justify mt-6 px-10">
+              <li>
+                Faith in God:
+                We build our foundation on God’s Word. Every learner is encouraged to trust, love, and walk daily with Christ.
+              </li>
+              <li>
+                Excellence:
+                We strive to do all things well—academically, spiritually, and socially—as unto the Lord.
+              </li>
+              <li>
+                Integrity:
+                We commit to honesty, transparency, and doing what is right, even when no one is watching.
+              </li>
+              <li>
+                Leadership:
+                We raise confident, wise, and compassionate leaders who serve others and impact the world positively.
+
+              </li>
+              <li>
+                Discipline:
+                We uphold good behavior, personal responsibility, and orderliness in a godly learning environment.
+              </li>
+              <li>
+                Respect for All:
+                We treat everyone with dignity, kindness, and empathy—recognizing that each person is created in God’s image.
+              </li>
+              <li>
+                Servant-Heartedness:
+                We encourage students to lead by serving others humbly and joyfully, following Christ’s example.
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className="px-8 max-sm:px-4 py-14 text-center flex flex-col items-center gap-4 bg-[#f5f5f5]" >
