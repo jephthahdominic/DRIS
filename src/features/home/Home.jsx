@@ -34,7 +34,7 @@ export default function Home() {
           <div className="max-md:w-[100%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
             <h3 className="text-xl font-semibold">Our Core Values</h3>
-            <ul className=" list-disc flex flex-col gap-3 mt-6 px-10">
+            <ul className=" list-disc flex flex-col text-left gap-3 mt-6 px-10">
               <li>
                 Faith in God:
                 We build our foundation on God’s Word. Every learner is encouraged to trust, love, and walk daily with Christ.
