@@ -13,14 +13,12 @@ export default function Home() {
       <section className="px-8 max-sm:px-4 py-14">
         <div className="flex flex-col items-center gap-3" data-aos="zoom-in" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
-          <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Dominican Royale International School (D.R.I.S.)</h2>
+          <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Us</h2>
           <p className="text-[#1f1f1fd5] max-md:w-[100%] leading-relaxed md:text-xl text-justify">
-            Dominican Royale International School (D.R.I.S.), founded in January 2007, is a growing private institution in Port Harcourt, Nigeria, committed 
-            to delivering quality education from nursery through secondary school. Born out of a passion to provide accessible and compassionate learning in 
-            an underserved area, D.R.I.S. began with just four children and three teachers and has since evolved into a respected school writing both WAEC and 
-            NECO exams, with successful graduates within and outside Nigeria. Our school is driven by strong values, personalized attention, and a commitment 
-            to nurturing every child’s potential in a safe, spiritual, and academically sound environment. With a focus on character development and academic 
-            excellence, D.R.I.S. continues to grow through community trust and a shared vision of making a lasting difference in education.</p>
+            At D.R.I.S., we are committed to nurturing excellence in a caring and disciplined environment. Since our founding in 2007, we’ve grown from 
+            just a few students into a thriving school offering Nursery, Primary, and Secondary education. With a focus on strong values, academic achievement, 
+            and individual growth, we prepare our students to succeed both within Nigeria and beyond.
+          </p>
           <Link to="/about_us" className="w-max p-3 px-6 mt-10 text-[#fff] bg-blue-500 shadow-2xl hover:bg-[#1D4ED8] transition-all cursor-pointer
           rounded-[10px]">Learn More</Link>
         </div>
