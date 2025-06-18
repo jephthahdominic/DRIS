@@ -24,8 +24,7 @@ export default function Admission() {
         <h1 className="text-5xl max-sm:text-4xl text-[#FFF] font-semibold max-md:leading-normal" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000">Join Us Today</h1>
         <p className="text-xl text-[#c8c8c8] w-[70%] max-md:w-[100%] leading-relaxed mt-6" data-aos="zoom-in" data-aos-duration="1000">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa velit, veritatis quia eum, non aliquid adipisci 
-          tempora maxime reiciendis, excepturi nemo eveniet nihil fugiat atque at! Aperiam ipsam velit suscipit!
+          Discover a nurturing environment where learning, growth, and excellence come together. Begin your journey with us today.
         </p>
       </div>
       <section className="px-8 max-sm:px-4 py-14 bg-white">
