@@ -30,12 +30,11 @@ export default function Gallery() {
       </section>
       {openImgViewer && <div className="fixed h-screen w-full p-10 z-30 top-0 bg-[rgba(0,0,0,0.80)] flex flex-col gap-3 jsutify-center items-center animate-fadeIn">
           <div className="h-full flex flex-col items-center justify-center gap-2">
-            <IoClose className="text-white text-5xl cursor-pointer" onClick={()=>setOpenViewer(false)}/>
-            <ImageViewer currentImg={currentImg}/>
-            <div className="flex items-center gap-2 mt-4">
+            <ImageViewer currentImg={currentImg} setOpenViewer={setOpenViewer}/>
+            <div className="flex items-center gap-0 mt-4">
               {gallery.map((item, key)=>(
-                <div className={`w-[50px] max-h-[50px] overflow-hidden ${item.URI === currentImg.URI && 'border-2 border-white'}`} key={key} onClick={()=>setCurrentImg(item)}>
-                  <img src={item.URI} alt="image" className="w-full max-h-[40px] object-cover"/>
+                <div className={`w-[50px] h-[30px] overflow-hidden ${item.URI === currentImg.URI && 'border-2 border-white'}`} key={key} onClick={()=>setCurrentImg(item)}>
+                  <img src={item.URI} alt="image" className="w-full max-h-[40px] object-fill"/>
                 </div>
               ))}
             </div>
