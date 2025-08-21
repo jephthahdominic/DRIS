@@ -5,18 +5,30 @@ import ProgramCard from "./ProgramCard"
 import Testimonials from "./Testimonials"
 import { Link } from "react-router-dom"
 import Awards from "./Awards"
-import admissionFlier from '../../assets/flier.jpeg';
 import Stats from "./Stats"
+import Advert from "./advert";
+import { useEffect, useState } from "react"
+import { contentfulService } from "../../../lib/contentfulService"
+
+
 
 export default function Home() {
+  const [advert, setAdvert] = useState()
+  useEffect(() => {
+    const getAdvert = async () => {
+      const advert = await contentfulService.getAdvert()
+      console.log(advert)
+      setAdvert(advert)
+    }
+    getAdvert()
+  }, [])
+  
   return (
     <div className="min-h-screen">
       <Hero />
       <section className="px-10 max-sm:px-4 py-20 flex items-center max-md:flex-col md:flex-row-reverse gap-8 justify-between" data-aos="fade-up" data-aos-offset="200"
         data-aos-duration="1000" data-aos-once="false">
-        <div className="h-[400px] p-0">
-          <img src={admissionFlier} alt="Admission advert banner" width={500} height={500} className="object-cover h-full w-full rounded-[10px]"/>
-        </div>
+        <Advert advert={advert}/>
         <div 
           className="flex flex-col gap-3 md:w-[50%]" 
           data-aos="zoom-in" 
