@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useState } from "react";
-import ImageCard from "./ImageCard";
-import ImageViewer from "./ImageViewer";
+import MediaCard from "./MediaCard";
+import MediaViewer from "./MediaViewer";
 import { contentfulService } from "../../../lib/contentfulService";
 
 
@@ -8,19 +8,20 @@ import { contentfulService } from "../../../lib/contentfulService";
 export default function Gallery() {
   const [galleryItems, setGalleryItems] = useState([])
   const [openImgViewer, setOpenViewer] = useState(false);
-  const [currentImg, setCurrentImg] = useState(null);
+  const [currentMedia, setCurrentMedia] = useState(null);
 
   useEffect(()=>{
     async function getMedia(){
       const media = await contentfulService.getMedia()
       setGalleryItems(media)
+      console.log(media)
     }
     getMedia()
   },[])
 
   function handleClickImage(item){
     setOpenViewer(true);
-    setCurrentImg(item)
+    setCurrentMedia(item)
   }
   return (
     <Suspense fallback={<p>Loading...</p>}>
@@ -36,13 +37,13 @@ export default function Gallery() {
         
         <section className="px-8 max-sm:px-4 py-14 bg-[#f5f5f5]">
           {galleryItems.length === 0 ? <p>No media items to view at the moment</p> : <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center gap-4">{galleryItems.map((item, key)=>(
-            <ImageCard key={key} item={item} clickAction={()=>handleClickImage(item)}/>
+            <MediaCard key={key} item={item} clickAction={()=>handleClickImage(item)}/>
           ))}</div>}
         </section>
         {openImgViewer && <div className="fixed h-screen w-full z-30 top-0 bg-[rgba(0,0,0,0.80)] flex flex-col jsutify-center items-center animate-fadeIn">
             <div className="h-full w-full flex flex-col md:flex-row items-center justify-center">
               <div onClick={()=>setOpenViewer(false)} className="h-full w-full"></div>
-              <ImageViewer currentImg={currentImg} setOpenViewer={setOpenViewer}/>
+              <MediaViewer currentMedia={currentMedia} setOpenViewer={setOpenViewer}/>
               <div onClick={()=>setOpenViewer(false)} className="h-full w-full"></div>
             </div>
         </div>}
