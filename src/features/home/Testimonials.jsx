@@ -20,9 +20,6 @@ const Testimonials = () => {
   const containerRef = useRef(null);
   const scrollAmount = useRef(0);
 
-  // Duplicate testimonials to simulate infinite loop
-  const extendedTestimonials = [...testimonials, ...testimonials];
-
   // Auto scroll logic
   useEffect(() => {
     const container = containerRef.current;

@@ -4,16 +4,6 @@ import EnrollmentDocuments from "./EnrollmentDocuments";
 import { useState } from "react";
 import { IoCloseCircle } from "react-icons/io5";
 
-const faq = [
-  {
-    question:"What is the application deadline?",
-    answer:"Applications are accepted year-round, contact the school for further details."
-  },
-  {
-    question:"What is the "
-  }
-]
-
 export default function Admission() {
 
   const [openScheduleBooker, setOpenScheduleBooker] = useState(false)

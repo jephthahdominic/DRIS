@@ -2,7 +2,7 @@ import { FaChevronDown } from 'react-icons/fa'
 import { LuChevronDown } from 'react-icons/lu'
 
 
-export default function FAQ({data}) {
+export default function FAQ() {
   return (
     <div className='w-[90%] mt-4 grid border rounded-t-[10px]'>
         <label className='text-left '>

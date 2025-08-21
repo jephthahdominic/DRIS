@@ -12,18 +12,20 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <section className="px-10 max-sm:px-4 py-20 flex items-center max-md:flex-col md:flex-row-reverse gap-10 justify-between" data-aos="fade-up" data-aos-offset="200"
+      <section className="px-10 max-sm:px-4 py-20 flex items-center max-md:flex-col md:flex-row-reverse gap-8 justify-between" data-aos="fade-up" data-aos-offset="200"
         data-aos-duration="1000" data-aos-once="false">
-        <img src={admissionFlier} alt="Admission advert banner" width={400} className="h-[500px] object-fill rounded-[10px]"/>
+        <div className="h-[400px] p-0">
+          <img src={admissionFlier} alt="Admission advert banner" width={500} height={500} className="object-cover h-full w-full rounded-[10px]"/>
+        </div>
         <div 
-          className="flex flex-col gap-3 w-[50%]" 
+          className="flex flex-col gap-3 md:w-[50%]" 
           data-aos="zoom-in" 
           data-aos-offset="200"
           data-aos-duration="1000" 
           data-aos-once="false"
         >
           <h2 className="text-4xl max-sm:text-3xl font-semibold section-heading">About Us</h2>
-          <p className="text-[#1f1f1fd5] max-md:w-[100%] leading-relaxed md:text-xl text-justify">
+          <p className="text-gray-500 max-md:w-[100%] leading-relaxed md:text-xl">
             At D.R.I.S., we are committed to nurturing excellence in a caring and disciplined environment. Since our founding in 2007, we’ve grown from 
             just a few students into a thriving school offering Nursery, Primary, and Secondary education. With a focus on strong values, academic achievement, 
             and individual growth, we prepare our students to succeed both within Nigeria and beyond.
@@ -52,10 +54,10 @@ export default function Home() {
           {values.map((value, key) => (
             <ValueCard value={value} key={key}/>
           ))}
-          <div className="max-md:w-[100%] md:w-[80%] p-6 shadow-md rounded-[10px] text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
+          <div className="max-md:w-[100%] md:w-[80%] p-6 shadow-md rounded-[10px] md:text-center cursor-pointer border border-[#f9f9f9]" data-aos="fade-up" data-aos-offset="200"
             data-aos-duration="1000" data-aos-once="false">
-            <h3 className="text-xl font-semibold">Our Core Values</h3>
-            <ul className=" list-disc flex flex-col text-left gap-3 mt-6 px-10">
+            <h3 className="text-2xl font-semibold text-left">Our Core Values</h3>
+            <ul className=" list-disc flex flex-col text-left gap-3 mt-6 md:px-10 text-base text-gray-500">
               <li>
                 Faith in God:
                 We build our foundation on God’s Word. Every learner is encouraged to trust, love, and walk daily with Christ.
