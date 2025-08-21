@@ -9,15 +9,26 @@ export default function Gallery() {
   const [galleryItems, setGalleryItems] = useState([])
   const [openImgViewer, setOpenViewer] = useState(false);
   const [currentMedia, setCurrentMedia] = useState(null);
+  const [page, setPage] = useState(1);
+  const [loading, setLoading] = useState(false);
+  const [noMore, setNoMore] = useState(false);
 
-  useEffect(()=>{
-    async function getMedia(){
-      const media = await contentfulService.getMedia()
-      setGalleryItems(media)
-      console.log(media)
+  async function loadPage(targetPage) {
+    try {
+      setLoading(true);
+      const media = await contentfulService.getMedia(targetPage);
+      setGalleryItems(media);
+      setPage(targetPage);
+      // If fewer than 10 items returned, we've likely reached the end
+      setNoMore(media.length < 10);
+    } finally {
+      setLoading(false);
     }
-    getMedia()
-  },[])
+  }
+
+  useEffect(() => {
+    loadPage(1);
+  }, [])
 
   function handleClickImage(item){
     setOpenViewer(true);
@@ -36,9 +47,40 @@ export default function Gallery() {
         </div>
         
         <section className="px-8 max-sm:px-4 py-14 bg-[#f5f5f5]">
-          {galleryItems.length === 0 ? <p>No media items to view at the moment</p> : <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center gap-4">{galleryItems.map((item, key)=>(
-            <MediaCard key={key} item={item} clickAction={()=>handleClickImage(item)}/>
-          ))}</div>}
+          {loading && (
+            <p className="text-center mb-4">Loading...</p>
+          )}
+          {!loading && galleryItems.length === 0 ? (
+            <p className="text-center">No media items to view at the moment</p>
+          ) : (
+            <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 text-center gap-4">
+              {galleryItems.map((item, key) => (
+                <MediaCard key={key} item={item} clickAction={() => handleClickImage(item)} />
+              ))}
+            </div>
+          )}
+
+          <div className="flex justify-center items-center gap-4 mt-8">
+            <button
+              type="button"
+              className={`px-4 py-2 rounded border ${page === 1 || loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'}`}
+              onClick={() => loadPage(page - 1)}
+              disabled={page === 1 || loading}
+              aria-label="Previous page"
+            >
+              Previous
+            </button>
+            <span className="text-sm text-gray-700">Page {page}</span>
+            <button
+              type="button"
+              className={`px-4 py-2 rounded border ${noMore || loading ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-100'}`}
+              onClick={() => loadPage(page + 1)}
+              disabled={noMore || loading}
+              aria-label="Next page"
+            >
+              Next
+            </button>
+          </div>
         </section>
         {openImgViewer && <div className="fixed h-screen w-full z-30 top-0 bg-[rgba(0,0,0,0.80)] flex flex-col jsutify-center items-center animate-fadeIn">
             <div className="h-full w-full flex flex-col md:flex-row items-center justify-center">
